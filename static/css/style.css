@@ -1,0 +1,116 @@
+:root{
+    --logo-blue:#507cd9;
+    --logo-green:#4bd579;
+    --accent-color:#faf600;
+}
+
+html,body{
+    margin:0px;
+    
+}
+
+#title{
+    font-size:220%;
+    position: relative;
+    opacity: 0.6;
+    transition: 0.2s;
+
+    animation-name: ZuiryAnimation;
+    animation-duration: 4s;
+}
+
+
+#title1{
+    font-family: Urbanist;
+    font-size:inherit;
+    float: left;
+    color: var(--logo-blue);
+}
+
+#title2{
+    font-family: Urbanist;
+    float: left;
+    font-size:inherit;
+    color: var(--logo-green);
+}
+
+header{
+    background-color:var(--accent-color);
+    display: flex;
+    justify-content: space-between;
+    margin:0px;
+    padding:0px 10px 0px 10px;
+}
+
+
+#login{
+    background-color: hsl(205, 92%, 75%) ;
+    border-radius: 20px;
+    float: right;
+    font-family: Urbanist;
+    color: black;
+    display: inline;
+    margin: 20px 0px 20px 0px;
+    padding:13px 20px 0px 20px;
+    transition: 0.2s;
+
+}
+
+.login_link{
+    text-decoration: none;
+    color:inherit;
+}
+
+#login:hover{
+    background-color: hsl(205, 92%, 65%) ;
+    color: white;
+}
+
+
+.arrow{
+    text-decoration: none;
+    text-align: center;
+    font-family: Urbanist;
+    color: hsl(0, 0%, 48%);
+    display: inline;
+    padding: 10px;
+}
+
+.arrow:hover{
+    border-radius: 10px;
+    background-color: hsl(0, 0%, 90%);
+    transition: 0.2s;
+}
+
+.pagenav{
+    margin: 10px;
+    font-size:20px;
+    text-align: center;
+
+}
+
+span{
+    font-size: inherit;
+}
+
+#title:hover {
+      opacity: 5;
+      font-size:240%;
+    
+}
+
+#login:hover {
+    margin: 10px 0px 30px 0px;
+    background-color: hsl(205, 70%, 44%) ;
+}
+
+.circle{
+    font-size: 200%;
+    color: grey;
+}
+
+@keyframes ZuiryAnimation {
+    
+  }
+
+
