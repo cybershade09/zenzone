@@ -1,10 +1,10 @@
 from flask import Flask,render_template,url_for,session,redirect,current_app
 import functools
 import sqlite3
-
-app = Flask(__name__,template_folder="templates",)
-current_app.db = sqlite3.connect("database.db")
-current_app.c = current_app.db.cursor()
+#from frameworks import RegistorForm,LoginForm
+app = Flask(__name__,template_folder="templates")
+app.db = sqlite3.connect("database.db")
+app.c = app.db.cursor()
 
 def login_required(route):
     @functools.wraps(route)
@@ -36,6 +36,6 @@ def root():
 
 @app.route('/login')
 def login():
-    
+    pass
 
-app.run(host='0.0.0.0',port=5000)
+app.run(port=5000)

@@ -10,8 +10,8 @@ c = conn.cursor()
 #: motivational quotes
 
 c.execute("""CREATE TABLE Users(
-user_ID INT,
-user_name TEXT,
+user_ID TEXT,
+username TEXT,
 password TEXT,
 mood REAL,
 PRIMARY KEY(user_ID)    
@@ -19,8 +19,8 @@ PRIMARY KEY(user_ID)
 conn.commit()
 
 c.execute("""CREATE TABLE Journal(
-journal_ID INT,
-user_ID INT,
+journal_ID TEXT,
+user_ID TEXT,
 content TEXT,
 date TEXT,
 evaluation REAL,
@@ -31,7 +31,7 @@ FOREIGN KEY (user_ID) REFERENCES Users(user_ID)
 conn.commit()
 
 c.execute("""CREATE TABLE Quotes(
-quote_ID INT,
+quote_ID TEXT,
 quote TEXT,
 PRIMARY KEY(quote_ID))""")
 

@@ -76,6 +76,15 @@ header{
     padding: 10px;
 }
 
+.arrowhide{
+    text-decoration: none;
+    text-align: center;
+    font-family: Urbanist;
+    display: inline;
+    padding: 10px;
+    color: white;
+}
+
 .arrow:hover{
     border-radius: 10px;
     background-color: hsl(0, 0%, 90%);
@@ -104,13 +113,84 @@ span{
     background-color: hsl(205, 70%, 44%) ;
 }
 
-.circle{
-    font-size: 200%;
-    color: grey;
+#circle{
+    color: hsl(0, 0%, 60%);
+    font-size: 70%;
+    margin: 5px;
 }
 
-@keyframes ZuiryAnimation {
-    
-  }
+#yo{
+    color: hsl(0, 0%, 60%);
+    font-size: 70%;
+    animation-name: changeColor;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    animation-direction: reverse;
+    margin: 5px;
+}
 
+#circlelight{
+    font-size: 80%;
+    color: hsl(0, 0%, 40%);
+    animation-name: changeColor;
+    animation-duration: 0.3s;
+    animation-timing-function: ease-out;
+    margin: 5px;
+}
+
+@keyframes slideIn{
+    0% {opacity: 0; transform: translateX(540px);}
+    100% {opacity: 1;}
+}
+
+@keyframes changeColor{
+    0% {color: hsl(0, 0%, 60%); font-size: 70%;}
+    100% {color: hsl(0, 0%, 40%); font-size: 80%;}
+}
+
+.pagetitle{
+    text-align: center;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+    margin: 40px;
+    font-family: Urbanist;
+    color: hsl(0, 0%, 30%);
+    /*padding: 20px 0px 0px 20px;*/
+}
+
+
+.content{
+    margin-top:20px;
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+}
+
+
+
+main{
+    margin:20px;
+}
+
+
+.linebreak{
+    background-color: hsl(33, 36%, 70%);
+    width: 40%;
+    height: 1px;
+    animation-name: slideIn;
+    animation-duration: 1s;
+    animation-timing-function: ease-out;
+}
+
+
+.footer {
+    color:var(--main-color);
+    padding: 1rem 0;
+    text-align: center;
+    bottom: 0;
+    left:0;
+    right:0;
+    font-family: Urbanist
+}
 
