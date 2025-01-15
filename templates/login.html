@@ -1,0 +1,25 @@
+
+{%extends "layout_2.html"%}
+{%from "macros.html" import render_text_field%}
+
+{%block main_content%}
+<form novalidate name="login" method="post" class="form">
+    {%with message = get_flashed_messages(with_categories=true)%}
+        {%-for category,message in messages-%}
+            <span class="form__flashed form__flash--{{category}}">{{message}}</span>
+        {%-endfor-%}
+    {%endwith%}
+
+    {{form.hidden_tag()}}
+    {{render_text_field(form.username)}}
+    {{render_text_field(form.password)}}
+    <span>Don't have an account? <a href = "{{url_for('.register')}}" class = "form__link">Register here</a></span>
+    <div>
+        {{form.submit(class_="button button--form")}}
+    </div>
+</form>
+{%endblock%}
+
+{%block footer_content%}
+
+{%endblock%}

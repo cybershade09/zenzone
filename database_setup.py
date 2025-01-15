@@ -16,6 +16,8 @@ password TEXT,
 mood REAL,
 PRIMARY KEY(user_ID)    
 )""")
+
+
 conn.commit()
 
 c.execute("""CREATE TABLE Journal(

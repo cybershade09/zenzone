@@ -6,53 +6,79 @@
 
 html,body{
     margin:0px;
-    
+    background-image: url("../background.jpg");
+    background-size: cover;
 }
 
 #title{
-    font-size:220%;
+    font-size:400%;
     position: relative;
-    opacity: 0.6;
     transition: 0.2s;
-
+    text-align: center;
+    padding: 20px 0px 20px 0px;
     animation-name: ZuiryAnimation;
     animation-duration: 4s;
+    position: relative;
+    
+}
+
+#title::after{
+    text-align: center;
+    content: "";
+    position: absolute;
+    top: 90px;
+    height: 4px;
+    width: 250px;
+    left: 480px;
+}
+
+#title:hover{
+    translate: 0px -10px;
 }
 
 
 #title1{
     font-family: Urbanist;
     font-size:inherit;
-    float: left;
+    display: inline;
     color: var(--logo-blue);
+    padding:0px;
 }
 
 #title2{
     font-family: Urbanist;
-    float: left;
     font-size:inherit;
+    display: inline;
     color: var(--logo-green);
+    padding:0px;
+
 }
 
 header{
-    background-color:var(--accent-color);
-    display: flex;
-    justify-content: space-between;
+    background-image: linear-gradient(to right, hsl(50, 74%, 63%) 30%,  hsl(50, 74%, 33%));
     margin:0px;
+    font-family: Urbanist;
     padding:0px 10px 0px 10px;
 }
 
+main{
+    background-color: hsla(0, 0%, 100%, 0.6);
+    padding:20px;
+    min-height: 90vh;
+    width:100wh;
+}
+
+
+
+
 
 #login{
-    background-color: hsl(205, 92%, 75%) ;
-    border-radius: 20px;
-    float: right;
     font-family: Urbanist;
     color: black;
-    display: inline;
-    margin: 20px 0px 20px 0px;
-    padding:13px 20px 0px 20px;
+    margin: auto;
+    padding:10px 0px 10px 0px;
     transition: 0.2s;
+    text-align: center;
 
 }
 
@@ -62,8 +88,9 @@ header{
 }
 
 #login:hover{
-    background-color: hsl(205, 92%, 65%) ;
-    color: white;
+    color: hsl(0, 0%, 50%);
+    font-size: 105%;
+    text-decoration: underline;
 }
 
 
@@ -102,16 +129,7 @@ span{
     font-size: inherit;
 }
 
-#title:hover {
-      opacity: 5;
-      font-size:240%;
-    
-}
 
-#login:hover {
-    margin: 10px 0px 30px 0px;
-    background-color: hsl(205, 70%, 44%) ;
-}
 
 #circle{
     color: hsl(0, 0%, 60%);
@@ -148,6 +166,12 @@ span{
     100% {color: hsl(0, 0%, 40%); font-size: 80%;}
 }
 
+@keyframes ZuiryAnimations{
+    0%{transformY: (200px);}
+    100% {transform}
+    
+}
+
 .pagetitle{
     text-align: center;
     animation-name: slideIn;
@@ -160,18 +184,35 @@ span{
 }
 
 
+.con{
+    margin-top: 60px;
+}
+
 .content{
-    margin-top:20px;
+    margin-top:10px;
     animation-name: slideIn;
     animation-duration: 2s;
     animation-timing-function: ease-out;
+    transition: transform 0.3s ease;
+    transition: 1s;
+    font-family: Schoolbell;
+    line-height: 40px;
+    padding-left: 15%;
+    padding-right: 15%;
+
+    
+    justify-content: center;
 }
 
+.content:hover{
+    transform: translateY(-10px);
+    
+} 
 
-
-main{
-    margin:20px;
+.container:hover {
+    transform: translateY(-10px);
 }
+
 
 
 .linebreak{
@@ -191,6 +232,47 @@ main{
     bottom: 0;
     left:0;
     right:0;
-    font-family: Urbanist
+    font-family: Urbanist;
+    background-color: hsla(0, 0%, 100%, 0.6);
+}
+
+.container {
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    width: 33%;
+    display: inline-block;
+    font-family: Urbanist;
+    color:white;
+    border-style: solid;
+    border-width: 15px;
+    border-color: hsl(0, 0%, 0%, 0.08);
+    transition-duration: 0.1s;
+}
+
+.smol{
+    width: 256px;
+    height: 256px;
+}
+
+#con1{
+    background-color: #ff3fb2;
+}
+
+#con2{
+    background-color: #fac400;
+}
+
+#con3{
+    background-color: #50b4d9;
+}
+
+.smoltitle{
+    font-size: 150%;
+    font-weight: 600;
+}
+
+h4{
+    font-weight: 300;
 }
 

@@ -4,8 +4,12 @@ import sqlite3
 import uuid
 from passlib.hash import pbkdf2_sha256
 from frameworks import RegistorForm,LoginForm,User
+from dotenv import load_dotenv
+import os
+load_dotenv()
 app = Flask(__name__,template_folder="templates",)
 
+app.config["SECRET_KEY"]=os.environ.get("SECRET_KEY")
 
 def login_required(route):
     @functools.wraps(route)
@@ -70,7 +74,7 @@ def register():
             return redirect(url_for('.register'))
         app.db = sqlite3.connect("database.db")
         app.c = app.db.cursor()
-        app.c.execute("INSERT INTO Users VALUES (?,?,?,?)",(uuid.uuid4().hex,form.username.data,pbkdf2_sha256.hash(form.password.data)))
+        app.c.execute("INSERT INTO Users VALUES (?,?,?,?)",(uuid.uuid4().hex,form.username.data,pbkdf2_sha256.hash(form.password.data)),0)
         app.db.commit()
         app.db.close()
         return redirect(url_for('.login'))
