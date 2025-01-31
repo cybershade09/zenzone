@@ -3,8 +3,17 @@
 
 
 {%block main_content%}
-<form novalidate name="register" method = "post" class = "form">\
-    {%with message = get_flashed_messages(with_categories=true)%}
+<form novalidate name="register" method = "post" class = "form">
+    
+    <div id = "title">
+        <h1 id="title1">
+            zen
+        </h1>
+        <h1 id="title2">
+            zone
+        </h1>
+    </div>
+    {%with messages = get_flashed_messages(with_categories=true)%}
         {%- for category,message in messages -%}
             <span class = "form_flashed form__flashed--{{category}}">{{message}}</span>
         {%-endfor-%}
@@ -14,7 +23,7 @@
     {{render_text_field(form.username)}}
     {{render_text_field(form.password)}}
     {{render_text_field(form.confirm_password)}}
-    <span>Already have an account? <a href="{{url_for('.login')}}" class="form__link">Register here</a></span>
+    <div id="msg">Already have an account? <a href="{{url_for('.login')}}" class="form__link">Login here</a></div>
     <div>
         {{form.submit(class_="button button--form")}}
     </div>

@@ -4,7 +4,16 @@
 
 {%block main_content%}
 <form novalidate name="login" method="post" class="form">
-    {%with message = get_flashed_messages(with_categories=true)%}
+    <div id = "title">
+        <h1 id="title1">
+            zen
+        </h1>
+        <h1 id="title2">
+            zone
+        </h1>
+    </div>
+    <p id="welcome">Welcome back!</p>
+    {%with messages = get_flashed_messages(with_categories=true)%}
         {%-for category,message in messages-%}
             <span class="form__flashed form__flash--{{category}}">{{message}}</span>
         {%-endfor-%}
@@ -13,7 +22,7 @@
     {{form.hidden_tag()}}
     {{render_text_field(form.username)}}
     {{render_text_field(form.password)}}
-    <span>Don't have an account? <a href = "{{url_for('.register')}}" class = "form__link">Register here</a></span>
+    <div id="msg">Don't have an account? <a href = "{{url_for('.register')}}" class = "form__link">Register here</a>     </div>
     <div>
         {{form.submit(class_="button button--form")}}
     </div>

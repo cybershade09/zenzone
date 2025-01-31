@@ -9,12 +9,13 @@ import os
 load_dotenv()
 app = Flask(__name__,template_folder="templates",)
 
+
 app.config["SECRET_KEY"]=os.environ.get("SECRET_KEY")
 
 def login_required(route):
     @functools.wraps(route)
     def route_wrapper(*args,**kwargs):
-        if session.get("email") is None:
+        if session.get("username") is None:
             return redirect(url_for("page_1"))
         return route(*args,**kwargs)
     return route_wrapper
@@ -41,7 +42,7 @@ def login():
     if form.validate_on_submit():
         app.db = sqlite3.connect("database.db")
         app.c = app.db.cursor()
-        app.c.execute("SELECT * FROM rowid,Users WHERE username = (?)",form.username.data)
+        app.c.execute("SELECT * FROM Users WHERE username = (?)",(form.username.data,))
         user_data = app.c.fetchone()
         app.db.commit()
         app.db.close()
@@ -65,7 +66,7 @@ def register():
     if form.validate_on_submit():
         app.db = sqlite3.connect("database.db")
         app.c = app.db.cursor()
-        app.c.execute("SELECT * FROM rowid,Users WHERE user_name = (?)",form.username.data)
+        app.c.execute("SELECT * FROM Users WHERE username = (?)",(form.username.data,))
         user_data = app.c.fetchone()
         app.db.commit()
         app.db.close()
@@ -74,9 +75,10 @@ def register():
             return redirect(url_for('.register'))
         app.db = sqlite3.connect("database.db")
         app.c = app.db.cursor()
-        app.c.execute("INSERT INTO Users VALUES (?,?,?,?)",(uuid.uuid4().hex,form.username.data,pbkdf2_sha256.hash(form.password.data)),0)
+        app.c.execute("INSERT INTO Users VALUES (?,?,?,?)",(uuid.uuid4().hex,form.username.data,pbkdf2_sha256.hash(form.password.data),0))
         app.db.commit()
         app.db.close()
+        flash("Account registered",category="success")
         return redirect(url_for('.login'))
     return render_template("register.html",form=form)
 
@@ -84,10 +86,14 @@ def register():
 @app.route('/')
 @login_required
 def index():
-    return render_template('second_page.html')
+    return render_template('index.html')
 
-@app.route('/login')
-def login():
-    pass
+@app.route()
 
-app.run(port=5000)
+@app.route('/logout')
+@login_required
+def logout():
+    session.clear()
+    return redirect(url_for('.page_2'))
+
+app.run(host = '0.0.0.0',port=5000)

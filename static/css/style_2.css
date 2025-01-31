@@ -1,0 +1,52 @@
+
+ .container2 {
+    width: 100%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    height: 100px; 
+    
+    
+    display: inline-block;
+    font-family: Urbanist;
+    color:white;
+
+    border-style: solid;
+    border-width: 15px;
+    border-color: hsl(0, 0%, 0%, 0.08);
+    
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+    margin-top: 100px;
+
+
+}
+
+
+
+.container1 {
+    width: 49.5%;
+    text-align: center;
+    box-sizing: border-box;
+    padding: 15px;
+    height: 100px;
+
+    display: inline-block;
+    font-family: Urbanist;
+    color:white;
+
+    border-style: solid;
+    border-width: 15px;
+    border-color: hsl(0, 0%, 0%, 0.08);
+
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
+
+}
+
+
+.text{
+    text-align: center; 
+}

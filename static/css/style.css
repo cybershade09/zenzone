@@ -4,9 +4,18 @@
     --accent-color:#faf600;
 }
 
-html,body{
+html{
+    margin: 0;
+}
+
+#homepage_body{
     margin:0px;
-    background-image: url("../background.jpg");
+    
+}
+
+#body1{
+    margin:0px;
+    background-image: url("../images/background.jpg");
     background-size: cover;
 }
 
@@ -14,26 +23,17 @@ html,body{
     font-size:400%;
     position: relative;
     transition: 0.2s;
-    text-align: center;
     padding: 20px 0px 20px 0px;
+    text-align: center;
     animation-name: ZuiryAnimation;
     animation-duration: 4s;
     position: relative;
     
 }
 
-#title::after{
-    text-align: center;
-    content: "";
-    position: absolute;
-    top: 90px;
-    height: 4px;
-    width: 250px;
-    left: 480px;
-}
 
 #title:hover{
-    translate: 0px -10px;
+    transform: translateY(-10px);
 }
 
 
@@ -43,6 +43,7 @@ html,body{
     display: inline;
     color: var(--logo-blue);
     padding:0px;
+    
 }
 
 #title2{
@@ -55,7 +56,7 @@ html,body{
 }
 
 header{
-    background-image: linear-gradient(to right, hsl(50, 74%, 63%) 30%,  hsl(50, 74%, 33%));
+    background-color: hsl(205, 92%, 85%);
     margin:0px;
     font-family: Urbanist;
     padding:0px 10px 0px 10px;
@@ -64,7 +65,7 @@ header{
 main{
     background-color: hsla(0, 0%, 100%, 0.6);
     padding:20px;
-    min-height: 90vh;
+    /* min-height: 70vh; */
     width:100wh;
 }
 
@@ -166,11 +167,7 @@ span{
     100% {color: hsl(0, 0%, 40%); font-size: 80%;}
 }
 
-@keyframes ZuiryAnimations{
-    0%{transformY: (200px);}
-    100% {transform}
-    
-}
+
 
 .pagetitle{
     text-align: center;
@@ -211,6 +208,7 @@ span{
 
 .container:hover {
     transform: translateY(-10px);
+    transition-duration: 0.7s;
 }
 
 
@@ -247,8 +245,12 @@ span{
     border-style: solid;
     border-width: 15px;
     border-color: hsl(0, 0%, 0%, 0.08);
-    transition-duration: 0.1s;
+    animation-name: slideIn;
+    animation-duration: 2s;
+    animation-timing-function: ease-out;
 }
+
+
 
 .smol{
     width: 256px;
@@ -275,4 +277,168 @@ span{
 h4{
     font-weight: 300;
 }
+
+.form{
+    font-family: Urbanist;
+    border-style: solid;
+    border-width: 15px;
+    width: auto;
+    margin-left: 30%;
+    margin-right: 30%;
+    height: auto;
+    padding: 25px;
+    text-align: center;
+    border-radius: 25px;
+    border-color: hsl(0, 0%, 0%, 0.08);
+    background-color: hsla(184, 34%, 47%, 0.3);
+  
+    transition-duration: 0.5s;
+}
+
+.form::after{
+   content: '';
+   position: absolute;
+   height: 100%;
+   width: 100%;
+   /* background: red; */
+}
+
+.form__group{
+    font-size: 150%;
+    padding: 5px;
+}
+
+.form__field{
+    font-size: 70%;
+    color: white;
+    padding: 5px;
+    border-radius: 5px;
+    border-width: 1;
+    border-style: solid;
+    border-color: hsla(184, 34%, 47%, 0.2);
+    background-color: hsla(0, 0%, 0%, 0.1);
+    float: right;
+}
+
+#welcome{
+    font-weight: 300;
+    font-style: italic;
+    font-size: 125%;
+}
+
+#msg{
+    margin: 8px;
+    position:relative;
+    z-index: 1; 
+    margin: 10px 0px 10px 0px;
+    transition-duration: 0.5s;
+}
+
+#welcome{
+    transition-duration: 0.5s;
+}
+
+.text{
+    margin-top: 4px;
+}
+
+/*
+#msg::after {
+    
+    content: '';
+    position: absolute;
+    background-color: orange;
+    top: 0px;
+    left: 20%;
+    width: 80%;
+    height: 10px;
+    z-index:-1;
+    transform: scaleX(0);
+    transition: transform 200ms ease-in; 
+    transform-origin: center;
+}
+
+#msg:hover::after{
+    transform: scaleX(1);
+   
+}
+*/
+
+
+
+
+.button.button--form{
+    font-size: 125%;
+    text-align: center;
+    padding: 10px 40px 10px 40px;
+    border-radius: 15px;
+    color: white;
+    background-color: hsla(151, 100%, 10%, 0.3);
+    border: 2px solid black
+}
+
+.button.button--form:hover{
+    background-color: hsla(151, 100%, 10%, 0.4);
+    font-size: 130%;
+    transform: translateY(-5px);
+    transition: 0.5s;
+    
+}
+
+.form:hover{
+    transform: translateY(-5px);
+    background-color: hsla(181, 34%, 47%, 0.48);
+    border: 15px solid; 
+    border-color: hsl(0, 0%, 0%, 0.18);
+}
+
+
+
+#msg:hover{
+    transform: translateY(-5px);
+}
+
+#welcome:hover{
+    transform: translateY(-5px);
+}
+
+
+input::placeholder{
+    font:3px;
+    color: hsla(184, 100%, 10%);
+    font-style: italic;
+}
+
+.form__error{
+    color:red;
+    display:block;
+}
+
+
+
+.login_link{
+    text-align: center;
+    display: block;
+}
+
+.form__flashed--danger{
+    color:red;
+}
+
+.form__flashed{
+
+}
+
+
+.zlogo{
+
+    margin:10px;
+    margin-bottom: 20px;
+}
+
+.zlogo:hover{
+    transform: rotateZ(360deg);
+    transition: 1.0s;
+}
+
 
