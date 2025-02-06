@@ -1,0 +1,59 @@
+{%extends "layout_3.html"%}
+
+{%block main_content%}
+
+<div class = "text"> Your Current Mood Score:   </div>
+<br>
+{% if user.mood < 0 %}
+   <div class="score" style="background-color: rgb(255, {{ (255 * (user.mood + 1)) | int }}, 0);">
+{% else %}
+   <div class="score" style="background-color: rgb({{ (255 - 255 * user.mood) | int }}, 255, 0);">
+{% endif %}
+      
+      <div>
+         {%if (50*(user.mood+1))|int<20%}
+         <i class="fa-solid fa-face-sad-tear" id="emote"></i>
+         {%elif (50*(user.mood+1))|int<40%}
+         <i class="fa-solid fa-face-frown" id="emote"></i>
+         {%elif (50*(user.mood+1))|int<60%}
+         <i class="fa-solid fa-face-meh" id="emote"></i>
+         {%elif (50*(user.mood+1))|int<80%}
+         <i class="fa-solid fa-face-smile" id="emote"></i>
+         {%else%}
+         <i class="fa-solid fa-face-grin" id="emote"></i>
+         {%endif%}
+      </div>
+      <div>
+         <h1 class="mood_score">{{(50*(user.mood+1))|int}}</h1>
+      </div>
+   </div>
+
+
+ <div class = "container_1" > 
+    <h1>{{quote}}</h1>
+    <p>ZenQuotes.io. (n.d.). Daily inspirational quotes. Retrieved from <a href="https://zenquotes.io">https://zenquotes.io</a></p>
+ </div>
+
+
+<a href="{{url_for('.journal')}}">
+   <div class = "container_2">
+         <img src="{{url_for('static',filename='images/dailyjournal.png')}}" alt="">
+         <h1>Daily journal</h1>
+      <h2 class="desc"> An avenue to convey your anxiety-related problems</h2>
+   </div>
+</a>
+
+<a href="{{url_for('.breathing')}}">
+   <div class = "container_3"> 
+      <img src="{{url_for('static',filename='images/478.png')}}" alt="">
+      <h1>4-7-8 breathing technique</h1>
+   <h2 class = "desc">A commonly used breathing technique that helps with anxiety</h2>
+   </div>
+</a>
+
+
+
+</body>
+{%endblock%}
+
+{%block footer_content%}{%endblock%}

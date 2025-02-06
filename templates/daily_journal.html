@@ -1,0 +1,51 @@
+{%extends 'layout_3.html'%}
+{%from "macros.html" import render_area_field,render_text_field%}
+{%block main_content%}
+
+<div class = "text" id="breathingTitle"> Daily Journal <br><p>Streak: {{user.streak}}</p></div>
+<br>
+        <form novalidate name="journal" method="post" class="form" id = "entry__form">
+            <div class="form__container" id="entry_container">
+                {{form.hidden_tag()}}
+                <div class="form__group">
+                    {{form.content.label(class_="form__label")}}
+                    {{form.content(rows=5,class_="form__field",style="resize:none")}}
+                
+                    {%- for error in form.content.errors %}
+                        <span class="form__error">⚠ {{error}}</span>
+                    {%endfor%}
+                </div>
+                <div class="buttons">
+                    {{form.submit(class_="button button--form")}}
+                </div>
+            </div>
+        </form>
+<div class = "title">
+        <h2 class = "title_past"> Past Logs: </h2>
+</div>
+    
+    
+<div class = "pastentries">
+   
+
+        {%for entry in entries%}
+        {% if entry.evaluation < 0 %}
+            <div class="log" style="background-color: rgb(255, {{ (255 * (entry.evaluation + 1)) | int }}, 0);">
+        {% else %}
+            <div class="log" style="background-color: rgb({{ (255 - 255 * entry.evaluation) | int }}, 255, 0);">
+        {% endif %}
+                <h1 class="content">{{ entry.content }}</h1>
+                <h2 class="content">Date: {{ entry.date.strftime('%d/%m/%Y') }}</h2>
+            </div>
+    
+        {%endfor%}
+
+</div>
+
+
+
+</body>
+
+{%endblock%}
+
+{%block footer_content%}{%endblock%}

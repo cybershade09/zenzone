@@ -1,0 +1,88 @@
+{%extends 'layout_3.html'%}
+{%block main_content%}
+
+
+
+<div class = "text" id="breathingTitle"> 4-7-8 breathing technique </div>
+
+<p class = "BreathingIntro">The 4-7-8 breathing technique is a simple breathing 
+    exercise designed to promote relaxation and reduce stress. It was popularized by Dr. Andrew Weil and is based on ancient yogic breathing practices (pranayama).</p>
+<br>
+
+
+
+
+<div class = "DIV1">
+
+  <button id="startButton">START</button>
+
+</div>
+
+
+
+<div class = "DIV2">
+  <!--div nth element (1-5)-->
+  <div class="animate-container">
+    <span class="animate"> Breathe in </span>
+    <span class="animate">1</span>
+    <span class="animate">2</span>
+    <span class="animate">3</span>
+    <span class="animate">4</span>
+
+      <!--div nth element (6-13)-->
+   <span class="animate"> Hold in </span>
+   <span class="animate">1</span>
+   <span class="animate">2</span>
+   <span class="animate">3</span>
+   <span class="animate">4</span>
+   <span class="animate">5</span>
+   <span class="animate">6</span>
+   <span class="animate">7</span>
+
+   <!--div nth element (14-22)-->
+   <span class="animate"> Breathe Out </span>
+   <span class="animate">1</span>
+   <span class="animate">2</span>
+   <span class="animate">3</span>
+   <span class="animate">4</span>
+   <span class="animate">5</span>
+   <span class="animate">6</span>
+   <span class="animate">7</span>  
+   <span class="animate">8</span>  
+
+
+
+  </div>
+      
+
+  
+
+
+
+
+  </div>
+
+
+</body>
+
+<script>
+
+document.getElementById("startButton").addEventListener("click", function() {
+
+    
+  
+
+
+  let container1 = document.querySelector(".animate-container");
+
+  // Remove the class if it exists, force reflow, and then re-add it
+  container1.classList.remove("start-animation");
+  void container1.offsetWidth; // Forces reflow (resets animation)
+  container1.classList.add("start-animation");
+
+})
+    </script>
+
+
+
+{%endblock%}

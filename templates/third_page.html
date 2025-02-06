@@ -1,0 +1,56 @@
+{%extends "layout.html"%}
+
+{%block main_content%}
+<div class="pagenav">
+    <a href="{{url_for('.page_2')}}" class="arrow">←</a>
+    <i class="fa-solid fa-circle" id="circle"></i>
+    <i class="fa-solid fa-circle" id="yo"></i>
+    <i class="fa-solid fa-circle" id="circlelight"></i>
+    <s hidden href="" class="arrowhide">→</s>
+</div>
+
+<div>
+<h1 class="pagetitle"> '4-7-8' Breathing Technique </h1>
+</div>
+
+
+
+<hr class="linebreak">
+
+
+<div>  <h2 class="content"> Struggling With Anxiety? Try This Breathing Exercise! (4-7-8 Breathing Technique) </h2>  </div>
+
+<div>  <h3 class="content">  </h3>  </div>
+
+
+
+<div class = "container2" id="con2">
+    <img src="{{url_for('static',filename='images/inhale.png')}}" alt="">
+<p class="smoltitle"> 1. Close your lips and inhale silently through your nose while counting to 4 seconds </p> 
+</div>
+
+
+<div class = "container2" id="con4">
+    <img src="{{url_for('static',filename='images/timer.png')}}" alt="">
+<p class="smoltitle"> 2. Hold your breath for 7 seconds </p>
+</div>
+
+<div class = "container2" id="con1">
+    <img src="{{url_for('static',filename='images/exhale.png')}}" alt="">
+<p class="smoltitle"> 3. Exhale completely through your mouth for 8 seconds, 
+    making the whooshing sound
+</p>
+</div>
+
+<div class = "container2" id="con3">
+    <img src="{{url_for('static',filename='images/exhale.png')}}" alt="">
+<p class="smoltitle"> 4. Repeat steps 1-3 for 4 times (or as needed) </p>
+</div>
+
+
+
+{%endblock%}
+
+{%block footer_content%}
+
+{%endblock%}

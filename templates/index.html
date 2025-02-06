@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zenzone</title>
+    <link rel="icon" href="{{url_for('static',filename='images/x_icon.svg')}}" type="image/x-icon">
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static',filename='images/x_icon.svg')}}" type="image/x-icon">
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zenzone</title>
+</head>
+<body id="body1">
+    <header>
+        <div id = "title">
+            <h1 id="title1">
+                zen
+            </h1>
+            <h1 id="title2">
+                zone
+            </h1>
+        </div>
+    </header>
+    <a href="{{url_for('.login')}}" class="bigbutton_link">
+        <div class="bigbutton">LOGIN (IF YOU HAVE ANXIETY)</div>
+    </a>
+    <a href="{{url_for('.page_1')}}" class="bigbutton_link">
+        <div class="bigbutton">FIND OUT MORE ABOUT ANXIETY</div>
+    </a>
+</body>
+</html>

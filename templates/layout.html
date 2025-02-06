@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>zenzone</title>
+
+    <script src="https://kit.fontawesome.com/eff6d61e57.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="{{url_for('static',filename='css/style.css')}}">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Urbanist:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Schoolbell&display=swap" rel="stylesheet">
+    <link rel="icon" href="{{url_for('static',filename='images/x_icon.svg')}}" type="image/x-icon">
+</head>
+<body id="body1">
+    <header>
+        <div id = "title">
+            <h1 id="title1">
+                zen
+            </h1>
+            <h1 id="title2">
+                zone
+            </h1>
+        </div>
+        <div id="login">
+            <a href="{{url_for('.login')}}" class = "login_link">Need help? Click here!</a>
+        </div>
+    </header>
+    <main>
+        {%block main_content%}{%endblock%}
+    </main>
+    <footer class = "footer">
+        {%block footer_content%}{%endblock%}
+        <small>Copyright &copy;2025. zenzone. All rights reserved</small>
+    </footer>
+    
+</body>
+</html>
+
