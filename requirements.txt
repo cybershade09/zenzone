@@ -8,3 +8,4 @@ email_validator
 passlib
 cryptography
 textblob
+requests
