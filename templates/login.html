@@ -18,10 +18,13 @@
             <span class="form__flashed form__flash--{{category}}">{{message}}</span>
         {%-endfor-%}
     {%endwith%}
-
-    {{form.hidden_tag()}}
-    {{render_text_field(form.username)}}
-    {{render_text_field(form.password)}}
+        {{form.hidden_tag()}}
+        <div id="login_field">
+            {{render_text_field(form.username)}}
+        </div>
+        <div id="login_field">
+            {{render_text_field(form.password)}}
+        </div>
     <div id="msg">Don't have an account? <a href = "{{url_for('.register')}}" class = "form__link">Register here</a>     </div>
     <div>
         {{form.submit(class_="button button--form")}}
