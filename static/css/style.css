@@ -238,6 +238,7 @@ span{
 .container:hover {
     transform: translateY(-10px);
     transition-duration: 0.7s;
+    border-color: hsl(0, 0%, 0%, 0.4);
 }
 
 .container2:hover {
@@ -302,39 +303,79 @@ span{
     font-family: Urbanist;
     background-color: hsla(0, 0%, 100%, 0.6);
 }
-
-.container {
-    text-align: center;
-    box-sizing: border-box;
-    padding: 15px;
-    width: 32%;
-    display: inline-block;
-    font-family: Urbanist;
-    color:white;
-    border-style: solid;
-    border-width: 15px;
-    border-color: hsl(0, 0%, 0%, 0.08);
-    animation-name: slideIn;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
+@media screen and (min-width: 1000px) {
+    .container {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 32%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
 }
 
-.container2 {
-    text-align: center;
-    box-sizing: border-box;
-    padding: 15px;
-    width: 49%;
-    display: inline-block;
-    font-family: Urbanist;
-    color:white;
-    border-style: solid;
-    border-width: 15px;
-    border-color: hsl(0, 0%, 0%, 0.08);
-    animation-name: slideIn;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
+@media screen and (max-width: 1000px) {
+    .container {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 100%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } 
 }
 
+
+
+@media screen and (min-width: 1000px) {
+    .container2 {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 49%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } 
+}
+
+@media screen and (max-width: 1000px) {
+    .container2 {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 100%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } 
+}
 
 .smol{
     width: 256px;
@@ -384,22 +425,7 @@ h4{
 
 
 
-.form{
-    font-family: Urbanist;
-    border-style: solid;
-    border-width: 15px;
-    width: auto;
-    margin-left: 30%;
-    margin-right: 30%;
-    height: auto;
-    padding: 25px;
-    text-align: center;
-    border-radius: 25px;
-    border-color: hsl(0, 0%, 0%, 0.08);
-    background-color: hsla(184, 34%, 47%, 0.3);
-  
-    transition-duration: 0.5s;
-}
+
 
 .form::after{
    content: '';
@@ -570,3 +596,176 @@ input::placeholder{
     text-align: center;
     color: white;
  }
+
+
+
+
+ 
+
+
+ /* ipad */
+@media screen and (max-width: 1024px){
+
+    
+    .form_label{
+        font-size: 5px;
+    }
+
+    #msg{
+        font-size:13px;
+    }
+
+
+}
+
+
+/* iphones 
+@media screen and (max-width: 500px){
+
+
+    #msg{
+        font-size:12px;
+    }
+
+    
+    #username.form__field{
+        width: 80px;
+    }
+
+
+    #password.form__field{
+        width: 80px;
+    }
+
+
+
+    .form__label{
+        font-size: 18px;
+    }
+
+    .pagetitle{
+        font-size: 20px;
+    }
+
+}
+    */
+
+
+@media screen and (max-width: 400px){
+
+#title1, #title2{
+    font-size: 18px;
+
+}
+
+
+    #msg{
+        font-size:10px;
+    }
+
+    
+    #username.form__field{
+        width: 60px;
+    }
+
+
+    #password.form__field{
+        width: 60px;
+    }
+
+
+
+    .form__label{
+        font-size: 15px;
+    }
+
+    .pagetitle{
+        font-size: 20px;
+    }
+
+
+#submit{
+    font-size:10px;
+}
+    
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        margin-left: 30%;
+        margin-right: 30%;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+@media screen and (max-width: 1170px) and (min-width: 780px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+@media screen and (max-width: 780px) and (min-width: 600px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+
+ 
