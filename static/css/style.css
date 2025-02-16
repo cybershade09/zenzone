@@ -9,14 +9,18 @@ html{
 }
 
 #homepage_body{
+    background-size: cover;
     margin:0px;
     
 }
 
 #body1{
     margin:0px;
-    background-image: url("../images/background.jpg");
     background-size: cover;
+}
+
+#body2{
+    background-color: hsl(205, 100%, 57%);
 }
 
 #title{
@@ -69,8 +73,33 @@ main{
     width:100wh;
 }
 
+.bigbutton{
+    background-color: hsl(205, 92%, 85%);
+    padding: 30px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: hsl(0, 0%, 0%, 0.08);
+    border-width: 10px;
+    margin: 80px;
+    font-family: Urbanist;
+    text-align: center;
+    margin-left: 25%;
+    margin-right: 25%;
+    margin-top: 120px;
+    font-size: 180%;
+    font-weight: 600;
+}
 
+.bigbutton:hover{
+    transform: translateY(-10px);
+    transition-duration: 0.7s;
+    border-color: hsl(0, 0%, 0%, 0.2);
+}
 
+.bigbutton_link{
+    text-decoration: none;
+    color: hsl(211, 100%, 18%);
+}
 
 
 #login{
@@ -209,7 +238,48 @@ span{
 .container:hover {
     transform: translateY(-10px);
     transition-duration: 0.7s;
+    border-color: hsl(0, 0%, 0%, 0.4);
 }
+
+.container2:hover {
+    transform: translateY(-10px);
+    transition-duration: 0.7s;
+    border-color: hsl(0, 0%, 0%, 0.4);
+}
+
+
+
+/* ipad */
+@media (max-width: 1024px){
+    .content{
+        font-size: 20px;
+    }
+    .pagetitle{
+        font-size: 25px;
+    }
+
+
+}
+
+
+/* iphones */
+@media (max-width: 500px){
+    .content{
+        font-size: 15px;
+    }
+
+    .pagetitle{
+        font-size: 20px;
+    }
+
+
+
+}
+
+
+
+
+
 
 
 
@@ -233,24 +303,79 @@ span{
     font-family: Urbanist;
     background-color: hsla(0, 0%, 100%, 0.6);
 }
+@media screen and (min-width: 1000px) {
+    .container {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 32%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    }
+}
 
-.container {
-    text-align: center;
-    box-sizing: border-box;
-    padding: 15px;
-    width: 33%;
-    display: inline-block;
-    font-family: Urbanist;
-    color:white;
-    border-style: solid;
-    border-width: 15px;
-    border-color: hsl(0, 0%, 0%, 0.08);
-    animation-name: slideIn;
-    animation-duration: 2s;
-    animation-timing-function: ease-out;
+@media screen and (max-width: 1000px) {
+    .container {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 100%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } 
 }
 
 
+
+@media screen and (min-width: 1000px) {
+    .container2 {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 49%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } 
+}
+
+@media screen and (max-width: 1000px) {
+    .container2 {
+        text-align: center;
+        box-sizing: border-box;
+        padding: 15px;
+        width: 100%;
+        display: inline-block;
+        font-family: Urbanist;
+        color:white;
+        border-style: solid;
+        border-width: 15px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        animation-name: slideIn;
+        animation-duration: 2s;
+        animation-timing-function: ease-out;
+    } 
+}
 
 .smol{
     width: 256px;
@@ -258,7 +383,7 @@ span{
 }
 
 #con1{
-    background-color: #ff3fb2;
+    background-color: rgb(255, 63, 117);
 }
 
 #con2{
@@ -267,6 +392,23 @@ span{
 
 #con3{
     background-color: #50b4d9;
+}
+
+#con4{
+    background-color: hsl(172, 100%, 35%);
+
+}
+#con5{
+    background-color: #7b28ff;
+
+}
+#con6{
+    background-color: rgb(255, 115, 33);
+
+}
+#con7{
+    background-color: #ff3ad8;
+
 }
 
 .smoltitle{
@@ -278,22 +420,12 @@ h4{
     font-weight: 300;
 }
 
-.form{
-    font-family: Urbanist;
-    border-style: solid;
-    border-width: 15px;
-    width: auto;
-    margin-left: 30%;
-    margin-right: 30%;
-    height: auto;
-    padding: 25px;
-    text-align: center;
-    border-radius: 25px;
-    border-color: hsl(0, 0%, 0%, 0.08);
-    background-color: hsla(184, 34%, 47%, 0.3);
-  
-    transition-duration: 0.5s;
-}
+
+
+
+
+
+
 
 .form::after{
    content: '';
@@ -441,4 +573,199 @@ input::placeholder{
     transition: 1.0s;
 }
 
+.four{
+    width: 36%;
+    display: inline-block;
+    font-size: 3000%;
+    font-family: 'Lilita One';
+    color: white;
+}
 
+#l4{
+    text-align: right;
+}
+#vroom{
+    text-align: center;
+    font-family: Urbanist;
+    color: white;
+ }
+
+ #pagenotfound{
+    font-size: 600%;
+    font-family: 'Lilita One';
+    text-align: center;
+    color: white;
+ }
+
+
+
+
+ 
+
+
+ /* ipad */
+@media screen and (max-width: 1024px){
+
+    
+    .form_label{
+        font-size: 5px;
+    }
+
+    #msg{
+        font-size:13px;
+    }
+
+
+}
+
+
+/* iphones 
+@media screen and (max-width: 500px){
+
+
+    #msg{
+        font-size:12px;
+    }
+
+    
+    #username.form__field{
+        width: 80px;
+    }
+
+
+    #password.form__field{
+        width: 80px;
+    }
+
+
+
+    .form__label{
+        font-size: 18px;
+    }
+
+    .pagetitle{
+        font-size: 20px;
+    }
+
+}
+    */
+
+
+@media screen and (max-width: 400px){
+
+#title1, #title2{
+    font-size: 18px;
+
+}
+
+
+    #msg{
+        font-size:10px;
+    }
+
+    
+    #username.form__field{
+        width: 60px;
+    }
+
+
+    #password.form__field{
+        width: 60px;
+    }
+
+
+
+    .form__label{
+        font-size: 15px;
+    }
+
+    .pagetitle{
+        font-size: 20px;
+    }
+
+
+#submit{
+    font-size:10px;
+}
+    
+}
+
+
+
+
+@media screen and (min-width: 1024px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        margin-left: 30%;
+        margin-right: 30%;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+@media screen and (max-width: 1170px) and (min-width: 780px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        margin-left: 20%;
+        margin-right: 20%;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+@media screen and (max-width: 780px) and (min-width: 600px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        margin-left: 10%;
+        margin-right: 10%;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+@media screen and (max-width: 600px) {
+    .form{
+        font-family: Urbanist;
+        border-style: solid;
+        border-width: 15px;
+        width: auto;
+        height: auto;
+        padding: 25px;
+        text-align: center;
+        border-radius: 25px;
+        border-color: hsl(0, 0%, 0%, 0.08);
+        background-color: hsla(184, 34%, 47%, 0.3);
+      
+        transition-duration: 0.5s;
+    }
+}
+
+
+ 
